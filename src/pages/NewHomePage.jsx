@@ -720,8 +720,8 @@ const NewHomePage = () => {
               </div>
               
               <a
-                className="btn-primary"
-                href="https://wa.me/971521549572?text=Hey%20I%20saw%20your%20ad%20about%20audit%20services.%20I%20want%20to%20know%20more."
+                className="btn-primary data-wa-track"
+                href="https://api.whatsapp.com/send/?phone=971521549572&text=Hi+I+saw+your+ad+for+Audit+Services+on+google.+I%E2%80%99d+like+to+get+started.&type=phone_number&app_absent=0"
                 target="_blank"
                 rel="noreferrer"
               >
