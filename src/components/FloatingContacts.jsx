@@ -5,6 +5,17 @@ import { brand } from '../content/countries';
 const FloatingContacts = () => {
   const phoneHref = brand.phone.replace(/\s+/g, '');
 
+  const pushWhatsAppGtmClick = (href) => {
+    if (window.dataLayer) {
+      window.dataLayer.push({
+        event: 'gtm.linkClick',
+        'Click URL': href,
+        'gtm.elementUrl': href,
+        _triggers: '193123837_46' // matches GTM trigger regex
+      });
+    }
+  };
+
   return (
     <div className="floating-contacts" aria-label="Contact options">
       <a
@@ -22,6 +33,7 @@ const FloatingContacts = () => {
               phone_number: '971521549572'
             });
           }
+          pushWhatsAppGtmClick('https://api.whatsapp.com/send/?phone=971521549572');
         }}
       >
         <FaWhatsapp className="contact-icon" />
