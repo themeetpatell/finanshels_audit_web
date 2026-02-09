@@ -595,7 +595,7 @@ const NewHomePage = () => {
                 }}
               >
                 <input type="hidden" name="zf_referrer_name" value="" />
-                <input type="hidden" name="zf_redirect_url" value="" />
+                <input type="hidden" name="zf_redirect_url" value={`${window.location.origin}/thank-you`} />
                 <input type="hidden" name="zc_gad" value="" />
                 <input type="hidden" name="utm_source" value="" />
                 <input type="hidden" name="utm_medium" value="" />
@@ -1065,7 +1065,7 @@ const NewHomePage = () => {
                 }}
               >
                 <input type="hidden" name="zf_referrer_name" value="" />
-                <input type="hidden" name="zf_redirect_url" value="" />
+                <input type="hidden" name="zf_redirect_url" value={`${window.location.origin}/thank-you`} />
                 <input type="hidden" name="zc_gad" value="" />
                 <input type="hidden" name="utm_source" value="" />
                 <input type="hidden" name="utm_medium" value="" />
