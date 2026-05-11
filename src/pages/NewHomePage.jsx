@@ -532,9 +532,7 @@ const NewHomePage = () => {
             </div>
             
             <h1 className="hero-title">
-              Looking for Trusted Auditing Services<br />
-              and Audit Firms in UAE?<br />
-              Say Hello to <span className="highlight-green">Finanshels</span>
+                Looking for a trusted auditing company in Dubai ?
             </h1>
             
             <p className="hero-description">

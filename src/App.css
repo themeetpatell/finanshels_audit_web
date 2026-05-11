@@ -13,6 +13,37 @@
   transition: all 0.3s ease;
 }
 
+.nav-deadline-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.55rem 1rem;
+  background: linear-gradient(135deg, #f16610, #cf4c05);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.nav-deadline-message {
+  letter-spacing: 0.01em;
+}
+
+.nav-deadline-timer {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.nav-deadline-timer span {
+  min-width: 3.25rem;
+  padding: 0.3rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  text-align: center;
+}
+
 .nav-modern.nav-scrolled {
   background: rgba(255, 255, 255, 0.95);
   border-bottom-color: var(--border);
@@ -266,6 +297,29 @@
 }
 
 @media (max-width: 768px) {
+  .nav-deadline-bar {
+    flex-direction: column;
+    gap: 0.45rem;
+    padding: 0.65rem 0.85rem;
+    text-align: center;
+  }
+
+  .nav-deadline-message {
+    font-size: 0.82rem;
+    line-height: 1.35;
+  }
+
+  .nav-deadline-timer {
+    gap: 0.35rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-deadline-timer span {
+    min-width: 3rem;
+    font-size: 0.82rem;
+  }
+
   .btn-nav-primary {
     padding: 0.625rem 1.25rem;
     font-size: 0.875rem;
