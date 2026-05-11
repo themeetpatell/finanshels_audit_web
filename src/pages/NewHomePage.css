@@ -348,6 +348,66 @@
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
 }
 
+/* Shrink hero form footprint by ~30% without affecting the final CTA form */
+.hero-consultation-form {
+  max-width: 70%;
+  margin-left: auto;
+  border-radius: 12px;
+  padding: 28px;
+}
+
+.hero-consultation-form .form-title {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.hero-consultation-form .form-subtitle {
+  font-size: 12px;
+  margin-bottom: 22px;
+}
+
+.hero-consultation-form label {
+  font-size: 12px;
+  margin: 8px 0 5px;
+}
+
+.hero-consultation-form .form-row {
+  gap: 8px;
+  margin: 6px 0 2px;
+}
+
+.hero-consultation-form .form-input {
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.hero-consultation-form .form-submit {
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.hero-consultation-form .form-disclaimer {
+  font-size: 11px;
+  margin-bottom: 16px;
+}
+
+.hero-consultation-form .form-badges {
+  gap: 14px;
+  padding-top: 14px;
+}
+
+.hero-consultation-form .badge-item {
+  font-size: 12px;
+}
+
+.hero-consultation-form .badge-icon {
+  font-size: 14px;
+}
+
 .form-title {
   font-size: 24px;
   font-weight: 700;
@@ -1644,6 +1704,12 @@
     position: static;
   }
 
+  .hero-consultation-form {
+    max-width: 100%;
+    padding: 24px;
+    border-radius: 12px;
+  }
+
   .dashboard-preview {
     min-width: 0;
     max-width: 640px;
@@ -1792,6 +1858,11 @@
   
   .consultation-form,
   .final-consultation-form {
+    padding: 24px;
+  }
+
+  .hero-consultation-form {
+    max-width: 100%;
     padding: 24px;
   }
   
