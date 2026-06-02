@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import finanshelsLogo from '../assets/finanshelslogo.svg';
 
-const AUDIT_DEADLINE = new Date('2026-05-30T23:59:59+04:00');
+const AUDIT_DEADLINE = new Date('2026-06-30T23:59:59+04:00');
 
 const getTimeRemaining = () => {
   const remainingMs = Math.max(AUDIT_DEADLINE.getTime() - Date.now(), 0);
@@ -40,8 +40,8 @@ const Nav = () => {
   return (
     <header className={`nav-modern ${isScrolled ? 'nav-scrolled' : ''}`}>
       <div className="nav-deadline-bar" role="status" aria-live="polite">
-        <span className="nav-deadline-message">May 30th* audit deadline approaching for DDA Audits.</span>
-        <div className="nav-deadline-timer" aria-label="Time remaining until May 30th DDA audit deadline">
+        <span className="nav-deadline-message">June 30th* audit deadline approaching for DDA Audits.</span>
+        <div className="nav-deadline-timer" aria-label="Time remaining until June 30th DDA audit deadline">
           <span>{formatUnit(timeRemaining.days)}d</span>
           <span>{formatUnit(timeRemaining.hours)}h</span>
           <span>{formatUnit(timeRemaining.minutes)}m</span>
