@@ -15,7 +15,7 @@
   background-position: center bottom;
   background-repeat: no-repeat;
   color: white;
-  padding: 120px 24px 120px;
+  padding: 168px 24px 120px;
   position: relative;
   overflow: hidden;
 }
@@ -599,13 +599,13 @@
   border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.metric-label {
+.report-metric .metric-label {
   font-size: 12px;
   color: #cbd5e1;
   margin-bottom: 6px;
 }
 
-.metric-value {
+.report-metric .metric-value {
   font-size: 16px;
   font-weight: 700;
   color: #fff;
@@ -1724,7 +1724,7 @@
   }
   
   .hero-section {
-    padding: 90px 18px;
+    padding: 224px 18px 80px;
   }
   
   .hero-container {
@@ -1886,6 +1886,10 @@
 }
 
 @media (max-width: 540px) {
+  .hero-section {
+    padding: 236px 16px 72px;
+  }
+
   .hero-title {
     font-size: 32px;
   }

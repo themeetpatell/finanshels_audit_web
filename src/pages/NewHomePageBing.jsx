@@ -528,7 +528,7 @@ const NewHomePageBing = () => {
           <div className="hero-left">
             <div className="trust-badge">
               <span className="trust-dot" aria-hidden="true" />
-              <span className="trust-text">Trusted audit partners for 5,000+ UAE businesses</span>
+              <span className="trust-text">Trusted audit partners for 7,000+ UAE businesses</span>
             </div>
             
             <h1 className="hero-title">
@@ -546,7 +546,7 @@ const NewHomePageBing = () => {
               <div className="hero-feature">
                 <FiCheckCircle className="feature-icon" />
                 <div>
-                  <strong>Top-Rated Audit Services in Dubai, Sharjah, Abu Dhabi</strong>
+                  <strong>Top-Rated Audit Services for DDA, IFZA, Meydan, and Main Land Businesses</strong>
                 </div>
               </div>
               <div className="hero-feature">
@@ -558,7 +558,7 @@ const NewHomePageBing = () => {
               <div className="hero-feature">
                 <FiCheckCircle className="feature-icon" />
                 <div>
-                  <strong>Leading Auditing Firm Serving 5000+ SMEs</strong>
+                  <strong>Leading Auditing Firm Serving 7,000+ SMEs</strong>
                 </div>
               </div>
             </div>
@@ -735,7 +735,7 @@ const NewHomePageBing = () => {
       <section className="stats-section">
         <div className="stats-container">
           <div className="stat-item">
-            <div className="stat-value">5,000+</div>
+            <div className="stat-value">7,000+</div>
             <div className="stat-label">Businesses Served</div>
           </div>
           <div className="stat-item">
@@ -924,7 +924,7 @@ const NewHomePageBing = () => {
           <div className="testimonials-header">
             <span className="testimonials-label">CLIENT SUCCESS STORIES</span>
             <h2 className="testimonials-heading">
-              Trusted by <span className="text-accent">5,000+ Businesses</span>
+              Trusted by <span className="text-accent">7,000+ Businesses</span>
             </h2>
             <p className="testimonials-description">
               Don't just take our word for it. Here's what our clients say about working with Finanshels.
@@ -1019,7 +1019,7 @@ const NewHomePageBing = () => {
               About Audits?
             </h2>
             <p className="cta-description">
-              Join 5,000+ UAE businesses who trust Finanshels with their accounting and audit requirements.
+              Join 7,000+ UAE businesses who trust Finanshels with their accounting and audit requirements.
               Set up a free consultation with our experts today!
             </p>
             

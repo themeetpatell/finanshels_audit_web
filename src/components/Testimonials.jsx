@@ -104,7 +104,7 @@ const Testimonials = () => {
         <div className="pill ghost">Client Success Stories</div>
         <div>
           <h2>
-            Trusted by <span className="accent-text">5,000+ Businesses</span>
+            Trusted by <span className="accent-text">7,000+ Businesses</span>
           </h2>
           <p className="muted">Hear what founders say about working with Finanshels.</p>
         </div>
