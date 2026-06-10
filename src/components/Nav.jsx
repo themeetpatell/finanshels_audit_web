@@ -42,11 +42,11 @@ const Nav = () => {
       <div className="nav-offer-bar" role="region" aria-label="Limited time offer">
         <p className="nav-offer-text">
           <span className="nav-offer-tag">Limited offer</span>
-          Get <strong>20% OFF</strong> and an <strong>AED&nbsp;100 Voucher</strong> on all Audit &amp; Accounting plans.
+          Get <strong>3 months FREE</strong> Accounting with Annual Plans &mdash; Switch Easily in <strong>48&nbsp;Hrs</strong>.
         </p>
         <a
           className="nav-offer-cta"
-          href="https://api.whatsapp.com/send/?phone=971521549572&text=Hi%2C+I%27d+like+to+claim+the+20%25+OFF+%2B+AED+100+Voucher+offer+on+Audit+%26+Accounting+plans.&type=phone_number&app_absent=0"
+          href="https://api.whatsapp.com/send/?phone=971521549572&text=Hi%2C+I%27d+like+to+claim+the+3+months+FREE+Accounting+offer+on+Annual+Plans.&type=phone_number&app_absent=0"
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => {
