@@ -82,7 +82,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       // make sure dataLayer exists
       window.dataLayer = window.dataLayer || [];
 
-      (function attachEnhancedConversion() {
+      // Capture the lead at submit time, but DEFER the Google Ads conversion
+      // (consultation_form_ec) to the thank-you page — only a confirmed
+      // submission that lands on /thank-you should count. Firing on submit is
+      // unreliable: the submit can fail Zoho validation, and the redirect away
+      // can cut off the tag before it sends.
+      (function deferConsultationConversion() {
         var formIds = ['form', 'cta-zoho-form'];
         var attached = {};
         var maxAttempts = 12;
@@ -94,14 +99,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           form.addEventListener('submit', function () {
             var emailField = form.querySelector('input[name="Email"]');
             var emailValue = emailField ? (emailField.value || '').trim() : '';
-            if (!emailValue) return;
-            window.dataLayer.push({
-              event: 'consultation_form_ec',
-              enhanced_conversion_data: {
-                email: emailValue
-              },
-              form_id: form.id
-            });
+            // Hand the email + a one-shot flag to the thank-you page.
+            // Same-origin sessionStorage survives the Zoho redirect
+            // (finanshels.com -> Zoho -> /thank-you) in the same tab.
+            try {
+              window.sessionStorage.setItem('consultation_submitted', '1');
+              window.sessionStorage.setItem('consultation_email', emailValue);
+            } catch (e) {}
           });
         }
 

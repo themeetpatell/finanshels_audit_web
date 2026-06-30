@@ -15,6 +15,34 @@ const ThankYou = () => {
       });
     }
 
+    // Fire the Google Ads conversion (consultation_form_ec) ONLY when this
+    // page was reached via a real form submission. The landing-page submit
+    // handler stashed this flag + email in sessionStorage before the Zoho
+    // redirect. Clearing the flag after firing means a refresh or a direct/
+    // bookmarked visit to /thank-you never double-counts.
+    let submitted = '';
+    let email = '';
+    try {
+      submitted = window.sessionStorage.getItem('consultation_submitted') || '';
+      email = window.sessionStorage.getItem('consultation_email') || '';
+    } catch {
+      // sessionStorage unavailable (private mode / blocked) — skip conversion
+    }
+
+    if (submitted && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'consultation_form_ec',
+        enhanced_conversion_data: { email },
+        user_data: { email }
+      });
+      try {
+        window.sessionStorage.removeItem('consultation_submitted');
+        window.sessionStorage.removeItem('consultation_email');
+      } catch {
+        // ignore — flag will be cleared on next successful access
+      }
+    }
+
     // Scroll to top
     window.scrollTo(0, 0);
   }, []);

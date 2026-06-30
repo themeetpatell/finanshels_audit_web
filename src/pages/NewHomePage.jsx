@@ -298,31 +298,6 @@ const NewHomePage = () => {
     window.zfutm_zfAdvLead = zfutm_zfAdvLead;
   }, []);
 
-  // Push consultation_form_ec for thank-you conversion
-  useEffect(() => {
-    const formIds = ['form', 'cta-zoho-form'];
-    const handler = (event) => {
-      const formEl = event.target;
-      const emailValue = formEl.querySelector('input[name="Email"]')?.value?.trim() || '';
-      if (window.dataLayer) {
-        window.dataLayer.push({
-          event: 'consultation_form_ec',
-          enhanced_conversion_data: { email: emailValue }
-        });
-      }
-    };
-
-    const attached = formIds
-      .map((id) => document.getElementById(id))
-      .filter(Boolean);
-
-    attached.forEach((form) => form.addEventListener('submit', handler));
-
-    return () => {
-      attached.forEach((form) => form.removeEventListener('submit', handler));
-    };
-  }, []);
-
   const clientLogos = [
     { src: '/clients/Binary.png', alt: 'Binary' },
     { src: '/clients/actualize.png', alt: 'Actualize' },
