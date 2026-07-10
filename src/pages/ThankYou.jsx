@@ -1,10 +1,21 @@
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { FiCheckCircle, FiCalendar, FiMail, FiPhone } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
 import './ThankYou.css';
 
+// Simple sanity check so we never render a garbage/injected value from the URL.
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 const ThankYou = () => {
+  // Zoho Bookings appends the booking details to the redirect URL (e.g.
+  // ?customer_email=...). Read it the idiomatic React Router way and only
+  // keep it if it actually looks like an email — otherwise fall back to a
+  // generic message (direct visits, missing/malformed params, etc.).
+  const [searchParams] = useSearchParams();
+  const rawEmail = searchParams.get('customer_email') || '';
+  const customerEmail = EMAIL_REGEX.test(rawEmail) ? rawEmail : '';
+
   useEffect(() => {
     // Fire GTM event on page load
     if (window.dataLayer) {
@@ -59,6 +70,9 @@ const ThankYou = () => {
           
           <p className="thank-you-message">
             We've received your consultation request and one of our audit experts will contact you within 24 hours.
+            {customerEmail && (
+              <> A confirmation and calendar invite are on their way to <strong>{customerEmail}</strong>.</>
+            )}
           </p>
 
           <div className="next-steps">
