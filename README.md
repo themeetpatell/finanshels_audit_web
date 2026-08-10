@@ -15,7 +15,6 @@ Modern React + Vite landing page for Finanshels audit, tax, and compliance servi
 - React Router
 - React Icons
 - Vanilla CSS for layout and theming
-- Zoho form embeds for lead capture
 
 ## Project Structure (high level)
 - `src/pages/NewHomePage.jsx` — main landing page sections and content
