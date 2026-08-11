@@ -324,15 +324,15 @@ const NewHomePage = () => {
   const auditNecessityPoints = [
     {
       icon: <FiFileText />,
-      title: 'License Renewal Compliance',
+      title: 'Annual Compliance Readiness',
       description:
-        'Whether you operate in mainland or free zones, submitting audited financial statements within specified deadlines is mandatory for trade license renewal.'
+        'Whether you operate in mainland or a free zone, keeping independently audited financial statements current is a core part of staying compliant and operating without disruption.'
     },
     {
       icon: <FiShield />,
-      title: 'Federal Tax Authority (FTA) Compliance',
+      title: 'Regulatory Compliance',
       description:
-        'Companies with revenues exceeding certain thresholds or those selected for FTA audit must comply through credible, independently audited accounts that withstand regulatory scrutiny.'
+        'As revenues grow, so does the expectation that your numbers are backed by credible, independently audited accounts that withstand regulatory scrutiny.'
     },
     {
       icon: <FiCreditCard />,
@@ -353,7 +353,7 @@ const NewHomePage = () => {
       icon: <FiShield />,
       title: 'Statutory Financial Audits',
       description:
-        'We deliver clear audit opinions that meet all UAE legal and regulatory requirements including those for DED license renewal, free zone compliance, and FTA submissions.'
+        'We deliver clear audit opinions prepared in line with UAE regulatory and reporting standards, covering both mainland and free zone companies.'
     },
     {
       icon: <FiBarChart2 />,
@@ -365,13 +365,13 @@ const NewHomePage = () => {
       icon: <FiBriefcase />,
       title: 'Free Zone Compliance Audits',
       description:
-        'We provide specialized audit services tailored to the specific requirements of major UAE free zones. Each free zone has unique audit submission requirements, deadlines, and reporting formats. Our team ensures your audited financials meet the exact specifications required by your free zone authority for seamless license renewal and ongoing compliance.'
+        'We provide specialized audit services tailored to the requirements of major UAE free zones. Reporting standards and formats differ from zone to zone, and our team prepares your audited financials to the standard your free zone expects, keeping your annual compliance on track.'
     },
     {
       icon: <FiZap />,
-      title: 'Tax Audits and FTA Support',
+      title: 'Tax Compliance Reviews',
       description:
-        'We review VAT returns, corporate tax filings, transfer pricing documentation, and tax provision calculations in line with UAE tax legislation. We provide expert representation, manage all communications with the FTA, prepare comprehensive responses to queries, and negotiate resolutions that protect your interests while ensuring compliance with UAE tax laws.'
+        'We review VAT and corporate tax records, transfer pricing documentation, and tax provision calculations against UAE tax legislation. We help you build well-documented positions with clear supporting records, so your tax compliance holds up when it is examined.'
     }
   ];
 
@@ -380,13 +380,13 @@ const NewHomePage = () => {
       icon: <FiShield />,
       title: 'UAE Regulatory Expertise',
       description:
-        'Our audit teams possess in-depth knowledge of UAE Commercial Companies Law, Federal Tax Authority regulations, free zone requirements across all major zones (JAFZA, DMCC, DIFC, ADGM), and emirate-specific licensing regulations. This specialized UAE knowledge ensures your audit meets exact regulatory specifications without delays or rejections.'
+        'Our audit teams work daily with UAE Commercial Companies Law, UAE tax legislation, and the reporting standards applied across major free zones and mainland businesses. That specialized local knowledge keeps your audit aligned with the standards your business is measured against, without delays or rework.'
     },
     {
       icon: <FiUsers />,
       title: 'Experienced Professional Team',
       description:
-        'Our auditors hold internationally recognized certifications including CPA, CA, ACCA, SOCPA, and CMA designations, with many team members holding UAE Ministry of Economy audit approval. With decades of combined experience conducting audits for UAE businesses across mainland and free zones, we bring technical excellence and practical wisdom specific to the UAE business environment.'
+        'Our auditors hold internationally recognized certifications including CPA, CA, ACCA, SOCPA, and CMA designations. With decades of combined experience conducting audits for UAE businesses across mainland and free zones, we bring technical excellence and practical wisdom specific to the UAE business environment.'
     },
     {
       icon: <FiZap />,
@@ -417,7 +417,7 @@ const NewHomePage = () => {
   const testimonials = [
     {
       quote:
-        'Fast, friendly, and very professional. I love how communicative they were handling our Corporate tax registration.',
+        'Fast, friendly, and very professional. I love how communicative they were throughout.',
       name: 'Abdulla Al-Ogail',
       role: 'Co-founder & CEO, Olymon',
       avatar: '/Founders/abdulla.jpeg'
@@ -472,7 +472,7 @@ const NewHomePage = () => {
     },
     {
       quote:
-        'Excellent service. Finanshels has made the tax registration process fast and easy. Their communication is super prompt and clear. 5 stars!!',
+        'Excellent service. Finanshels has made the whole process fast and easy. Their communication is super prompt and clear. 5 stars!!',
       name: 'Tina Chugani',
       role: 'Managing Director, Proxis LLC',
       avatar: '/Founders/tina.jpeg'
@@ -512,14 +512,14 @@ const NewHomePage = () => {
             
             <p className="hero-description">
               With a dedicated team of experts trained on the nuances of UAE laws and regulations,
-              Finanshels supports small businesses with audit ready books and FTA representation.
+              Finanshels supports small businesses with audit-ready books and year-round compliance support.
             </p>
             
             <div className="hero-features">
               <div className="hero-feature">
                 <FiCheckCircle className="feature-icon" />
                 <div>
-                  <strong>Top-Rated Audit Services for DDA, IFZA, Meydan, and Main Land Businesses</strong>
+                  <strong>Top-Rated Audit Services for Free Zone and Mainland Businesses</strong>
                 </div>
               </div>
               <div className="hero-feature">
@@ -735,8 +735,8 @@ const NewHomePage = () => {
               Why is <span className="highlight-green">Audit</span> Necessary?
             </h2>
             <p className="section-subtitle">
-              As your business grows, so do the compliance requirements. Failure to keep up with FTA audits can
-              lead to penalties and tarnish your business reputation.
+              As your business grows, so do the compliance requirements. Falling behind on audit-ready records
+              puts your compliance standing and your reputation at risk.
             </p>
           </div>
           
@@ -836,14 +836,14 @@ const NewHomePage = () => {
                   <div className="report-highlight">
                     <span className="highlight-dot" />
                     <div>
-                      <p className="highlight-title">FTA-Ready Financials</p>
+                      <p className="highlight-title">Compliance-Ready Financials</p>
                       <p className="highlight-desc">Prepared to UAE standards with full supporting schedules.</p>
                     </div>
                   </div>
                   <div className="report-highlight">
                     <span className="highlight-dot" />
                     <div>
-                      <p className="highlight-title">License Renewal Pack</p>
+                      <p className="highlight-title">Annual Compliance Pack</p>
                       <p className="highlight-desc">Signed audit report, notes, and management letter.</p>
                     </div>
                   </div>

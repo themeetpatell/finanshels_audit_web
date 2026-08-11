@@ -3,7 +3,7 @@ import { FiStar } from 'react-icons/fi';
 const testimonials = [
   {
     quote:
-      'Fast, friendly, and very professional. I love how communicative they were handling our Corporate tax registration.',
+      'Fast, friendly, and very professional. I love how communicative they were throughout.',
     name: 'Abdulla Al-Ogail',
     title: 'Co-founder & CEO, Olymon',
     avatar: '/Founders/abdulla.jpeg',
@@ -53,7 +53,7 @@ const testimonials = [
     avatar: '/Founders/themeetpatel.png',
   },
   {
-    quote: 'Excellent service. Finanshels has made the tax registration process fast and easy. Their communication is super prompt and clear. 5 stars!!',
+    quote: 'Excellent service. Finanshels has made the whole process fast and easy. Their communication is super prompt and clear. 5 stars!!',
     name: 'Tina Chugani',
     title: 'Managing Director, Proxis LLC',
     avatar: '/Founders/tina.jpeg',
