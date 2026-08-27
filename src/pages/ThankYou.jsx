@@ -3,11 +3,14 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { FiCheckCircle, FiCalendar, FiMail, FiPhone } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
 import './ThankYou.css';
+import { buildWhatsAppHref, getRememberedChannel } from '../utils/channelLinks';
 
 // Simple sanity check so we never render a garbage/injected value from the URL.
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const ThankYou = () => {
+  // Channel is carried over from the landing page across the Zoho redirect.
+  const whatsAppHref = buildWhatsAppHref(getRememberedChannel());
   // Zoho Bookings appends the booking details to the redirect URL (e.g.
   // ?customer_email=...). Read it the idiomatic React Router way and only
   // keep it if it actually looks like an email — otherwise fall back to a
@@ -111,10 +114,11 @@ const ThankYou = () => {
             
             <div className="contact-buttons">
               <a
-                href="https://api.whatsapp.com/send/?phone=971521549572&text=Hi+I+just+submitted+a+consultation+request+for+Audit+Services.&type=phone_number&app_absent=0"
+                href={whatsAppHref}
                 target="_blank"
                 rel="noreferrer"
-                className="contact-button whatsapp-button"
+                className="contact-button whatsapp-button data-wa-track"
+                data-wa-track=""
                 onClick={() => {
                   if (window.dataLayer) {
                     window.dataLayer.push({

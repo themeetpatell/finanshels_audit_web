@@ -1,9 +1,13 @@
 import { FaWhatsapp } from 'react-icons/fa';
 import { FiPhoneCall } from 'react-icons/fi';
+import { useLocation } from 'react-router-dom';
 import { brand } from '../content/countries';
+import { buildWhatsAppHref, getChannelForPath } from '../utils/channelLinks';
 
 const FloatingContacts = () => {
   const phoneHref = brand.phone.replace(/\s+/g, '');
+  const { pathname } = useLocation();
+  const whatsAppHref = buildWhatsAppHref(getChannelForPath(pathname));
 
   const pushWhatsAppGtmClick = (href) => {
     if (window.dataLayer) {
@@ -20,7 +24,8 @@ const FloatingContacts = () => {
     <div className="floating-contacts" aria-label="Contact options">
       <a
         className="contact-btn whatsapp data-wa-track"
-        href="https://api.whatsapp.com/send/?phone=971521549572&text=Hi+I+saw+your+ad+for+Audit+Services+on+google.+I%E2%80%99d+like+to+get+started.&type=phone_number&app_absent=0"
+        data-wa-track=""
+        href={whatsAppHref}
         target="_blank"
         rel="noreferrer"
         aria-label="Chat on WhatsApp"

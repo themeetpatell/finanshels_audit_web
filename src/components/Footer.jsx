@@ -1,7 +1,12 @@
 import { FiMail } from 'react-icons/fi';
+import { useLocation } from 'react-router-dom';
+import { buildBookingHref, getChannelForPath } from '../utils/channelLinks';
 import finanshelsLogo from '../assets/finanshelslogo.svg';
 
 const Footer = () => {
+  const { pathname } = useLocation();
+  const bookingHref = buildBookingHref(getChannelForPath(pathname));
+
   return (
     <footer className="footer-modern">
       <div className="footer-container-modern">
@@ -32,7 +37,7 @@ const Footer = () => {
               <a href="#pricing" className="footer-link">Pricing</a>
               <a href="#reviews" className="footer-link">Reviews</a>
               <a
-                href="https://contact-finanshels.zohobookings.com/#/audit-consultation"
+                href={bookingHref}
                 className="footer-link"
                 target="_blank"
                 rel="noopener noreferrer"

@@ -1,9 +1,11 @@
 import { useEffect, useRef } from 'react';
 import { FiCheckCircle, FiStar, FiFileText, FiShield, FiUsers, FiZap, FiBarChart2, FiBriefcase, FiCreditCard, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import './NewHomePage.css';
+import { buildWhatsAppHref } from '../utils/channelLinks';
 
 const NewHomePage = () => {
   const testimonialsTrackRef = useRef(null);
+  const whatsAppHref = buildWhatsAppHref('google');
 
   // Zoho advanced lead UTM capture (provided snippet)
   useEffect(() => {
@@ -780,7 +782,8 @@ const NewHomePage = () => {
               
               <a
                 className="btn-primary data-wa-track"
-                href="https://api.whatsapp.com/send/?phone=971521549572&text=Hi+I+saw+your+ad+for+Audit+Services+on+google.+I%E2%80%99d+like+to+get+started.&type=phone_number&app_absent=0"
+                data-wa-track=""
+                href={whatsAppHref}
                 target="_blank"
                 rel="noreferrer"
                 onClick={() => {

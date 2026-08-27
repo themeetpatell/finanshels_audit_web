@@ -1,8 +1,12 @@
 import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import finanshelsLogo from '../assets/finanshelslogo.svg';
+import { buildWhatsAppHref, getChannelForPath } from '../utils/channelLinks';
 
 const Nav = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const { pathname } = useLocation();
+  const whatsAppHref = buildWhatsAppHref(getChannelForPath(pathname));
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,8 +24,9 @@ const Nav = () => {
           Get <strong>3 months FREE</strong> Accounting with Annual Plans &mdash; Switch Easily in <strong>48&nbsp;Hrs</strong>.
         </p>
         <a
-          className="nav-offer-cta"
-          href="https://api.whatsapp.com/send/?phone=971521549572&text=Hi%2C+I%27d+like+to+claim+the+3+months+FREE+Accounting+offer+on+Annual+Plans.&type=phone_number&app_absent=0"
+          className="nav-offer-cta data-wa-track"
+          data-wa-track=""
+          href={whatsAppHref}
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => {
